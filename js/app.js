@@ -39,6 +39,7 @@ async function loadProducts() {
             </div>
         </div>
     `;
+    console.log(products);
        
   });
   document.getElementsByClassName("products")[0].innerHTML = html;
