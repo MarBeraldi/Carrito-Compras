@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   LoadProductsCart();
 });
 async function getProductsDb() {
-  const url = "./DBProducts.json";
+  const url = "DBProducts.json";
   try {
     const response = await fetch(url);
     const result = await response.json();
