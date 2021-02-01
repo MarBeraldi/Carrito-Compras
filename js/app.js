@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   LoadProductsCart();
 });
 function getProductsDb() {
-  const url = "../DB-Products.json";
+  const url = "../DBProducts.json";
   return fetch(url)
     .then((response) => {
       return response.json();
@@ -21,7 +21,7 @@ async function loadProducts() {
   const products = await getProductsDb();
   let html = "";
 
-  products.forEach((product) => {
+  produc9+ts.forEach((product) => {
     html += `
     <div class = "col-3 product-container">
             <div class = "card product">
