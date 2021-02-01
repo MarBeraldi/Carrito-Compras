@@ -4,24 +4,21 @@ document.addEventListener("DOMContentLoaded", () => {
   loadProducts();
   LoadProductsCart();
 });
-function getProductsDb() {
+async function getProductsDb() {
   const url = "../DBProducts.json";
-  return fetch(url)
-    .then((response) => {
-      return response.json();
-    })
-    .then((result) => {
-      return result;
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  try {
+    const response = await fetch(url);
+    const result = await response.json();
+    return result;
+  } catch (err) {
+    console.log(err);
+  }
 }
 async function loadProducts() {
   const products = await getProductsDb();
   let html = "";
 
-  produc9+ts.forEach((product) => {
+  products.forEach((product) => {
     html += `
     <div class = "col-3 product-container">
             <div class = "card product">
