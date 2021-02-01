@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   LoadProductsCart();
 });
 function getProductsDb() {
-  const url = "../DB-Products.json";
+  const url = "./../DB-Products.json";
   return fetch(url)
     .then((response) => {
       return response.json();
